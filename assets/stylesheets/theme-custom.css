@@ -1,0 +1,14 @@
+/* Add here all your CSS customizations */
+.footer {
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    text-align: right;
+    font-weight: lighter;
+    font-family: Arial;
+    height: 50px;
+    padding-right: 35px;
+    line-height: 50px;
+    background: #34495e;
+}
