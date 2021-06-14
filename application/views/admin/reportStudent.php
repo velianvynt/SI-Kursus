@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Report</title>
     <link rel="stylesheet" href="<?= base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css">
-    <style>
-        .gambar {
-            src: url('../assets/login/bg-login.jpg');
-        }
-    </style>
 </head>
 
 <body>
