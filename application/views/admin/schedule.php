@@ -118,7 +118,7 @@
                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</a></button>
                         <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Add</button>
                     </div>
-
+                </form>
             </div>
         </div>
     </div>
