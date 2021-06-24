@@ -333,8 +333,7 @@ class Staff extends CI_Controller
 
     public function deleteStudent($id)
     {
-        $data = array('id' => $id);
-        $this->Model_staff->deleteStudent($data);
+        $this->Model_staff->deleteStudent($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('staff/listStudent');
     }
@@ -369,8 +368,7 @@ class Staff extends CI_Controller
 
     public function deleteCourse($id)
     {
-        $data = array('id' => $id);
-        $this->Model_staff->deleteCourse($data);
+        $this->Model_staff->deleteCourse($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('staff/listCourse');
     }
@@ -471,8 +469,7 @@ class Staff extends CI_Controller
 
     public function deleteClass($id)
     {
-        $data = array('id' => $id);
-        $this->Model_staff->deleteClass($data);
+        $this->Model_staff->deleteClass($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('staff/listClass');
     }
@@ -499,12 +496,7 @@ class Staff extends CI_Controller
 
     public function deletePembagian($id, $class)
     {
-        $data = array(
-            'id'    => $id,
-            'class' => $class
-        );
-
-        $this->Model_staff->deletePembagian($data);
+        $this->Model_staff->deletePembagian($id, $class);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('staff/table/' . $class);
     }
@@ -690,10 +682,7 @@ class Staff extends CI_Controller
 
     public function deleteTeacher($id)
     {
-        $data = array(
-            'id' => $id
-        );
-        $this->Model_staff->deleteTeacher($data);
+        $this->Model_staff->deleteTeacher($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('staff/listTeacher');
     }

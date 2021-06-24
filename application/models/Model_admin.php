@@ -97,10 +97,8 @@ class Model_admin extends CI_Model
         }
     }
 
-    public function deletePembagian($data)
+    public function deletePembagian($id, $class)
     {
-        $id = $data['id'];
-        $class = $data['class'];
         $this->db->query("DELETE FROM tb_nilai WHERE id_stud = $id AND id_class = $class");
         $this->db->query("DELETE FROM tb_absen WHERE id_stud = $id AND id_class = $class");
         $this->db->query("DELETE FROM tb_pembagian_kelas WHERE id_student = $id AND id_class = $class");
@@ -145,10 +143,8 @@ class Model_admin extends CI_Model
         // }
     }
 
-    public function deleteStaff($where)
+    public function deleteStaff($code, $id)
     {
-        $id = $where['id'];
-        $code = $where['code'];
         $this->db->query("DELETE FROM tb_staff WHERE id = $id");
         $this->db->query("DELETE FROM tb_user WHERE code = '$code'");
     }
@@ -195,10 +191,8 @@ class Model_admin extends CI_Model
         $this->db->update('tb_user', $data2);
     }
 
-    public function deleteTeacher($where)
+    public function deleteTeacher($$code, $id)
     {
-        $id = $where['id'];
-        $code = $where['code'];
         $this->db->query("DELETE FROM tb_jadwal WHERE id_teacher = $id");
         $this->db->query("DELETE FROM tb_teacher WHERE id = $id");
         $this->db->query("DELETE FROM tb_user WHERE code = '$code'");

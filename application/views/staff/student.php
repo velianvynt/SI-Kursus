@@ -32,7 +32,7 @@
             </thead>
             <tbody>
                 <?php $no = 1;
-                foreach ($student as $s) : ?>
+                foreach ($student as $s) : ?> 
                     <tr>
                         <td style="text-align: center;"><?= $no++ ?></td>
                         <td><?= $s['nik']; ?></td>

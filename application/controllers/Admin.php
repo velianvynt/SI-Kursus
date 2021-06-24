@@ -257,8 +257,7 @@ class Admin extends CI_Controller
 
     public function deleteStudent($id)
     {
-        $data = array('id' => $id);
-        $this->Model_admin->deleteStudent($data);
+        $this->Model_admin->deleteStudent($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('admin/listStudent');
     }
@@ -306,12 +305,7 @@ class Admin extends CI_Controller
 
     public function deleteListTableClass($id, $class)
     {
-        $data = array(
-            'id'    => $id,
-            'class' => $class
-        );
-
-        $this->Model_admin->deletePembagian($data);
+        $this->Model_admin->deletePembagian($id, $data);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('admin/listTableClass/' . $class);
     }
@@ -634,11 +628,7 @@ class Admin extends CI_Controller
 
     public function deleteStaff($code, $id)
     {
-        $data = array(
-            'id' => $id,
-            'code' => $code
-        );
-        $this->Model_admin->deleteStaff($data);
+        $this->Model_admin->deleteStaff($code, $id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('admin/listStaff');
     }
@@ -964,11 +954,7 @@ class Admin extends CI_Controller
 
     public function deleteTeacher($code, $id)
     {
-        $data = array(
-            'id'    => $id,
-            'code' => $code
-        );
-        $this->Model_admin->deleteTeacher($data);
+        $this->Model_admin->deleteTeacher($code, $id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('admin/listTeacher');
     }
@@ -1067,8 +1053,7 @@ class Admin extends CI_Controller
 
     public function deleteSchedule($id)
     {
-        $data = array('id' => $id);
-        $this->Model_admin->deleteSchedule($data);
+        $this->Model_admin->deleteSchedule($id);
         $this->session->set_flashdata('info', ' , Data has been deleted');
         redirect('admin/listSchedule');
     }

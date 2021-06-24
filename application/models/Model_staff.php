@@ -178,10 +178,8 @@ class Model_staff extends CI_Model
         }
     }
 
-    public function deletePembagian($data)
+    public function deletePembagian($id, $class)
     {
-        $id = $data['id'];
-        $class = $data['class'];
         $this->db->query("DELETE FROM tb_nilai WHERE id_stud = $id AND id_class = $class");
         $this->db->query("DELETE FROM tb_absen WHERE id_stud = $id AND id_class = $class");
         $this->db->query("DELETE FROM tb_pembagian_kelas WHERE id_student = $id AND id_class = $class");
